@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.myapp.vasuvanka.calculator.MainActivity">
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="first number"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Number"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="second number"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Number"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="122dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/sum"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:onClick="performOp"
+            android:text="sum"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="231dp" />
+
+        <Button
+            android:id="@+id/subtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="performOp"
+            android:layout_gravity="center"
+            android:text="subtract"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="211dp"
+            tools:layout_editor_absoluteY="231dp" />
+
+        <Button
+            android:id="@+id/multi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="performOp"
+            android:text="multiplication"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="294dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="101dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/multi"
+        android:layout_marginTop="56dp"
+        android:layout_toEndOf="@+id/multi"
+        android:layout_toRightOf="@+id/multi"
+        android:layout_gravity="center"
+        android:text="Result"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="372dp" />
+
+
+</LinearLayout>
